@@ -1,0 +1,553 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Inter',
+        sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1392px;
+}
+
+.header {
+    background-image: url(../assets/image/fon-header.png);
+    background-repeat: no-repeat;
+    padding: 77px 116px 107px 116px;
+
+}
+
+a {
+    line-height: 0;
+}
+
+section.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    margin-top: 43px;
+}
+
+section.calculator article {
+    max-width: 564px;
+}
+
+article.index {
+    padding-right: 99px;
+}
+
+
+.index h1 {
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    color: #253347;
+    margin-bottom: 35px;
+}
+
+p {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #5E6E85;
+}
+
+
+article.details {
+    max-width: 564px;
+    background: #FFFFFF;
+    box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+article.details h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.05em;
+    color: #253347;
+}
+
+input[type="radio"] {
+    border: 1px solid #D8E2E7;
+    width: 31px;
+    height: 31px;
+    background: #FFFFFF;
+    cursor: pointer;
+
+    display: none;
+
+}
+
+input[type="radio"]+label {
+    padding-left: 49px;
+    background-image: url(../assets/image/radio-button\ norm.svg);
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    background-size: contain;
+
+    background-position: left center;
+}
+
+input[type="radio"]:hover+label {
+    padding-left: 49px;
+    background-image: url(../assets/image/radio-button\ hover.svg);
+    background-repeat: no-repeat;
+}
+
+input[type="radio"]:checked+label {
+    padding-left: 49px;
+    background-image: url(../assets/image/radio-button\ checked.svg);
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+div.choice {
+
+    display: flex;
+    gap: 164px;
+
+
+}
+
+div.choice1,
+div.choice2 {
+    display: flex;
+    justify-content: center;
+    max-width: 238px;
+    gap: 18px;
+}
+
+label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #253347;
+
+}
+
+div.Metric.fbx {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 16px;
+}
+
+
+input[type="text"] {
+    max-width: 238px;
+    height: 69px;
+    border: 1px solid #D8E2E7;
+    border-radius: 12px;
+    background: #FFFFFF;
+    padding: 20px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.05em;
+    color: #253347;
+    outline-color: #345FF6;
+    cursor: pointer;
+
+}
+
+span {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.05em;
+    color: #345FF6;
+}
+
+.Metric-cm {
+    position: relative;
+}
+
+span.cm {
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translateY(-15%);
+}
+
+.Metric-kg {
+    position: relative;
+}
+
+span.kg {
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translateY(-15%);
+}
+
+input[type="text"]::placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.05em;
+    color: #253347;
+    opacity: 0.25;
+}
+
+
+
+
+div.Welcome {
+    max-width: 500px;
+    min-height: 130px;
+
+    background: linear-gradient(90deg, #345FF7 0%, #587DFF 100%);
+    border-radius: 16px 65px 65px 16px;
+    
+    padding: 32px;
+
+}
+
+div.Welcome h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+
+
+}
+
+div.Welcome p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+div.enter.Imperial {
+    display: none;
+}
+
+/* div.enter Imperial {
+    position: relative;
+}
+
+ span.ft {
+    position: absolute;
+    top: 25.5%;
+    left: 64%;
+    position: absolute;
+    
+ }
+
+ span.in { 
+    position: absolute;
+     top: 25.5%;
+    left: 78%;
+   
+ } 
+
+ 
+ span.st {
+    position: absolute;
+    top: 31.5%;
+    left: 64%;
+   
+ }
+
+ span.ibs {
+    position: absolute;
+     top: 31.5%;
+    left: 77.5%;
+   
+ }  */
+
+
+div.result.BMI {
+    display: none;
+}
+
+/* div.result.BMI {
+    max-width: 500px;
+    min-height: 166px;
+    border-radius: 16px 999px 999px 16px;
+background: linear-gradient(90deg, #345FF6 0%, #587DFF 100%);
+ 
+    padding: 32px;
+    display: flex;
+    gap: 100px;
+       
+} */
+
+/* p.your_bmi {
+    max-width: 130px;
+    color: #FFF;
+}
+p.your_bmi span {
+    color: #FFF;
+    font-size: 64px;
+    line-height: 110%;
+letter-spacing: -3.2px; 
+}
+p.ideal {
+    max-width: 206px;
+    color: #FFF;
+} */
+
+
+section.what_mean {
+
+    max-width: 1160px;
+    min-height: 630px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 131px;
+    row-gap: 48px;
+    margin-bottom: 96px;
+
+}
+
+article.foto_man {
+    position: relative;
+}
+
+div.fon {
+    position: absolute;
+    top: -70px;
+}
+
+
+div.man {
+    position: absolute;
+    top: -215px;
+    left: 40px;
+
+}
+
+article.info {
+    max-width: 465px;
+    padding-top: 240px;
+    position: relative;
+}
+
+
+h3 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    color: #253347;
+    margin-bottom: 35px;
+}
+
+article.info::before {
+    content: url(../assets/image/line\ rite.svg);
+    position: absolute;
+    top: -20px;
+    right: 7%;
+}
+
+section.advice {
+    max-width: 1392px;
+    min-height: 402px;
+      border-radius: 35px;
+background: var(--gradient-1, linear-gradient(315deg, rgba(214, 230, 254, 0.245) 0%, rgba(214, 252, 254, 0) 100%));
+
+    border-radius: 35px;
+    padding: 72px 116px 92px 116px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+section.advice article {
+    max-width: 365px;
+    min-height: 234px;
+
+
+}
+
+
+div.circle_fon {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #F21E84;
+    border-radius: 50%;
+    background-color: #F21E84;
+    opacity: 0.15;
+
+}
+
+div.eating,
+div.exercise,
+div.sleep {
+    position: relative;
+    margin-bottom: 45px;
+
+}
+
+div.eating+h2 {
+    margin-bottom: 24px;
+}
+
+img[alt="eating"],
+img[alt="exercise"],
+img[alt="sleep"] {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+div.exercise_fon {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #F69134;
+    border-radius: 50%;
+    background-color: #F69134;
+    opacity: 0.15;
+}
+
+div.sleep_fon {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #22C1C1;
+    border-radius: 50%;
+    background-color: #22C1C1;
+    opacity: 0.15;
+}
+
+div.exercise+h2 {
+    margin-bottom: 24px;
+}
+
+div.sleep+h2 {
+    margin-bottom: 24px;
+}
+
+section.Limitations {
+    max-width: 1160px;
+    min-height: 232px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    column-gap: 32px;
+    row-gap: 32px;
+    justify-content: center;
+
+}
+
+article.Limitations_bmi {
+    max-width: 564px;
+
+}
+
+section.Limitations article+article {
+    max-width: 365px;
+    background: #FFFFFF;
+    box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+
+h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.05em;
+    color: #253347;
+    margin-bottom: 16px;
+    padding-left: 48px;
+    position: relative;
+
+
+
+}
+
+article.Gender h4::before {
+    content: url(../assets/icon/gender.svg);
+    
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  
+}
+
+article+article.line.left {
+    position: relative;
+    margin-right: 300px;
+    padding: 0;
+}
+
+img[alt="line"] {
+    position: absolute;
+    left: 150px;
+}
+
+article.Muscle h4::before {
+
+    content: url(../assets/icon/biceps.svg);
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   
+
+}
+
+article.Age h4::before {
+    content: url(../assets/icon/cake.svg);
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+article.Pregnancy h4::before {
+    content: url(../assets/icon/smile.svg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+article.Race h4::before {
+    content: url(../assets/icon/person.svg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+article.Gender {
+    margin-right: 119px;
+    margin-left: 80px;
+}
